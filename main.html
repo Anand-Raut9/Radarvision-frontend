@@ -138,7 +138,7 @@
       border-radius: 10px;
       text-align: center;
       margin-top: 20px;
-      display: none; /* Initially hidden */
+      display: none;
     }
 
     .result-box p {
@@ -182,13 +182,11 @@
     const resultMessage = document.getElementById('result-message');
 
     uploadForm.addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevent form submission
+      event.preventDefault(); 
       if (fileInput.files.length > 0) {
-        // Display the result box with a success message
         resultMessage.textContent = `You have selected: ${fileInput.files[0].name}`;
         resultBox.style.display = 'block';
       } else {
-        // Show an error message if no file is selected
         resultMessage.textContent = 'Please select a file to upload.';
         resultBox.style.display = 'block';
       }
