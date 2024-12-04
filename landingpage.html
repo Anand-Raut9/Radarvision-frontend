@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microclassify</title>
+  <style>
+   /* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #043873 0%, #1a3f85 40%, #245eac 100%);
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Styles */
+.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent; 
+            padding: 15px 30px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .navbar .logo {
+            color: white; 
+            font-weight: bold;
+            background: none; 
+            padding: 8px 10%;
+            border-radius: 50%;
+            font-size: 28px;
+
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 10px;
+            margin-right: 80px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            background-color: #4F9CF9;
+        }
+
+
+.hero {
+  display: flex;
+  justify-content: space-between; /* Space the content */
+  align-items: center; /* Center items vertically */
+  height: 100%; /* Make hero section take full height of the viewport */
+  padding: 0 50px; /* Reduce space from the edges */
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px; /* Increase width of the text block */
+  text-align: left; /* Align text to the left */
+}
+
+.hero h1 {
+  font-size: 56px; /* Larger heading */
+  font-weight: bold;
+  margin-bottom: 20px; /* Space between heading and paragraph */
+}
+
+.hero p {
+  font-size: 20px; /* Slightly larger text */
+  line-height: 1.8; /* Increase line spacing for readability */
+  margin-bottom: 30px; /* Space below the paragraph */
+}
+
+.cta-button {
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #4F9CF9;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #357ae8;
+  transform: scale(1.05);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 650px; /* Increase the max-width of the image container */
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 600px; /* Increase the image size */
+  height: auto;
+  display: block;
+  margin-left: -40px; /* Bring the image closer to the text */
+}
+
+
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MicroClassify</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Get More Done with Microclassify</h1>
+      <p>Project management software that empowers your team to collaborate, plan, analyze, and manage everyday tasks.</p>
+      <button class="cta-button">Try Microclassify Free →</button>
+    </div>
+    <div class="hero-image">
+      <!-- Embedding the uploaded SVG file -->
+      <img src="Aircraft-rafiki.svg" alt="Illustration" />
+    </div>
+  </div>
+</body>
+</html>
