@@ -182,10 +182,9 @@
     <div class="logo">MicroClassify</div>
     <ul class="nav-links">
       <li><a href="{{ url_for('home') }}">Home</a></li>
-      <li><a href="{{ url_for('mission') }}">Our Mission</a></li>
-      <li><a href="{{ url_for('features') }}">Features</a></li>
+      <li><a href="{{ url_for('upload') }}">Upload & Classify</a></li>
       <li><a href="{{ url_for('contact') }}">Contact</a></li>
-    </ul>
+      <li><a href="{{ url_for('auth') }}">Login/singnup</a></li>
   </nav>
 
   <div id="home" class="image">
@@ -195,14 +194,15 @@
       <button class="cta-button">Try MicroClassify Free →</button>
     </div>
     <div class="image-container">
-      <img src="Aircraft-rafiki.svg" alt="Illustration" />
+      <img src="../static/Aircraft-rafiki.svg" alt="Illustration" />
     </div>
   </div>
 
   <div id="mission" class="section">
     <h2>Our Mission</h2>
     <p>
-      RadarVision addresses critical safety and security challenges by using advanced radar technology to differentiate drones from other aerial entities such as birds. This innovation ensures reliable and efficient monitoring of airspace to prevent unauthorized activities and enhance security.
+      RadarVision addresses critical safety and security challenges by using advanced radar technology to differentiate drones from other aerial entities such as birds.
+       This innovation ensures reliable and efficient monitoring of airspace to prevent unauthorized activities and enhance security.
     </p>
   </div>
 

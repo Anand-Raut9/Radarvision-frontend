@@ -145,6 +145,10 @@
       font-size: 18px;
       margin: 0;
     }
+    .nav-links li a.highlight:hover {
+        background-color: #357ae8;
+    }
+
   </style>
 </head>
 <body>
@@ -152,10 +156,9 @@
     <div class="logo">MicroClassify</div>
     <ul class="nav-links">
       <li><a href="{{ url_for('home') }}">Home</a></li>
-      <li><a href="{{ url_for('mission') }}">Our Mission</a></li>
-      <li><a href="{{ url_for('features') }}">Features</a></li>
+      <li><a href="{{ url_for('upload') }}">Upload & Classify</a></li>
       <li><a href="{{ url_for('contact') }}">Contact</a></li>
-    </ul>
+      <li><a href="{{ url_for('auth') }}">Login/singnup</a></li>
   </nav>
   
   <div class="upload-container">
