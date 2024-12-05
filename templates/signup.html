@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Signup Page</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -28,7 +28,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: transparent; 
+            background-color: transparent;
             padding: 15px 30px;
             width: 100%;
             position: fixed;
@@ -38,13 +38,12 @@
         }
 
         .navbar .logo {
-            color: white; 
+            color: white;
             font-weight: bold;
-            background: none; 
+            background: none;
             padding: 8px 10%;
             border-radius: 50%;
             font-size: 28px;
-
         }
 
         .nav-links {
@@ -66,9 +65,8 @@
         }
 
         .nav-links li a:hover {
-            background-color: #4F9CF9;
+        background-color: #4F9CF9;
         }
-
 
         .container {
             display: flex;
@@ -82,48 +80,41 @@
             margin-top: 150px;
         }
 
-        .left-section {
+        .signup-box {
             flex: 1;
-            background-color: #043873;
+            background: white;
+            color: #043873;
             padding: 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
 
-        .left-section h1 {
-            font-size: 48px;
-            font-weight: bold;
-            margin-bottom: 30px;
+        .signup-box h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
         }
 
-        .login-box {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .login-input {
+        .signup-box input {
             width: 90%;
             padding: 15px;
+            margin: 10px 0;
             font-size: 16px;
             border: 1px solid #ccc;
             border-radius: 10px;
             outline: none;
         }
 
-        .login-input:focus {
+        .signup-box input:focus {
             border: 2px solid #4F9CF9;
             box-shadow: 0 0 8px rgba(79, 156, 249, 0.5);
         }
 
-        .login-button {
-            width: 60%;
-            margin-left: 16%;
+        .signup-button {
+            width: 50%;
             padding: 15px;
             background-color: #4F9CF9;
             color: white;
@@ -134,14 +125,15 @@
             cursor: pointer;
             text-align: center;
             transition: background-color 0.3s ease, transform 0.2s;
+            margin-top: 20px;
         }
 
-        .login-button:hover {
+        .signup-button:hover {
             background-color: #357ae8;
-            transform: scale(1.05); 
+            transform: scale(1.05);
         }
 
-        .right-section {
+        .section {
             flex: 1;
             background: linear-gradient(to bottom, #245eac, #4F9CF9); 
             display: flex;
@@ -153,18 +145,18 @@
             border-bottom-right-radius: 20px;
         }
 
-        .right-section h2 {
+        .section h2 {
             font-size: 32px;
             margin-bottom: 20px;
         }
 
-        .right-section p {
+        .section p {
             font-size: 18px;
             margin-bottom: 30px;
             text-align: center;
         }
 
-        .sign-up-button {
+        .login-button {
             padding: 15px 30px;
             background-color: white;
             color: #4F9CF9;
@@ -177,7 +169,7 @@
             transition: background-color 0.3s ease, transform 0.2s;
         }
 
-        .sign-up-button:hover {
+        .login-button:hover {
             background-color: #e6e6e6;
             transform: scale(1.05);
         }
@@ -189,24 +181,6 @@
             color: white;
             margin-top: auto;
             width: 100%;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        .social-icons img {
-            width: 24px;
-            height: 24px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icons img:hover {
-            transform: scale(1.2);
         }
     </style>
 </head>
@@ -221,29 +195,24 @@
       </nav>
 
     <div class="container">
-        <div class="left-section">
-            <h1>LOGIN</h1>
-            <div class="login-box">
-                <input type="text" placeholder="Username" class="login-input">
-                <input type="password" placeholder="Password" class="login-input">
-                <button class="login-button">Login</button>
-            </div>
+        <div class="signup-box">
+            <h2>Create Account</h2>
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email Address">
+            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Confirm Password">
+            <button class="signup-button">Sign Up</button>
         </div>
 
-        <div class="right-section">
-            <h2>New Here?</h2>
-            <p>Sign up and discover a great amount of new opportunities!</p>
-            <a href="{{ url_for('signup') }}"><button class="sign-up-button">Sign Up</button></a>
+        <div class="section">
+            <h2>Already Registered?</h2>
+            <p>Log in to access your account and start using MicroClassify.</p>
+            <a href="{{ url_for('login') }}"><button class="login-button">Log In</button></a>
         </div>
     </div>
 
     <footer>
         <p>© 2024 RadarVision. All Rights Reserved.</p>
-        <div class="social-icons">
-            <a href="#" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#" aria-label="Twitter"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-        </div>
     </footer>
 </body>
 </html>

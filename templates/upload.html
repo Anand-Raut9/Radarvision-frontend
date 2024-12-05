@@ -25,44 +25,49 @@
     }
 
     .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: transparent;
-      padding: 15px 30px;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10;
-    }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent; 
+            padding: 15px 30px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
 
-    .navbar .logo {
-      color: white;
-      font-weight: bold;
-      font-size: 28px;
-    }
+        .navbar .logo {
+            color: white; 
+            font-weight: bold;
+            background: none; 
+            padding: 8px 10%;
+            border-radius: 50%;
+            font-size: 28px;
 
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-      margin: 0;
-      padding: 0;
-    }
+        }
 
-    .nav-links li a {
-      text-decoration: none;
-      color: white;
-      font-size: 20px;
-      padding: 15px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 10px;
+            margin-right: 80px;
+        }
 
-    .nav-links li a:hover {
-      background-color: #4F9CF9;
-    }
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            background-color: #4F9CF9;
+        }
 
     .upload-container {
       background: white;
@@ -158,8 +163,8 @@
       <li><a href="{{ url_for('home') }}">Home</a></li>
       <li><a href="{{ url_for('upload') }}">Upload & Classify</a></li>
       <li><a href="{{ url_for('contact') }}">Contact</a></li>
-      <li><a href="{{ url_for('auth') }}">Login/singnup</a></li>
-  </nav>
+      <li><a href="{{ url_for('login') }}">Login/Singup</a></li>
+    </nav>
   
   <div class="upload-container">
     <form id="uploadForm">
@@ -172,28 +177,11 @@
       </div>
       <button type="submit" class="submit-button">Submit</button>
     </form>
+    <a href="{{ url_for('sample_upload') }}"><p style="margin-top: 20px;">Use our sample images</p></a>
 
     <div class="result-box" id="result-box">
       <p id="result-message">Your file has been successfully uploaded!</p>
     </div>
   </div>
-
-  <script>
-    const uploadForm = document.getElementById('uploadForm');
-    const fileInput = document.getElementById('file-input');
-    const resultBox = document.getElementById('result-box');
-    const resultMessage = document.getElementById('result-message');
-
-    uploadForm.addEventListener('submit', function (event) {
-      event.preventDefault(); 
-      if (fileInput.files.length > 0) {
-        resultMessage.textContent = `You have selected: ${fileInput.files[0].name}`;
-        resultBox.style.display = 'block';
-      } else {
-        resultMessage.textContent = 'Please select a file to upload.';
-        resultBox.style.display = 'block';
-      }
-    });
-  </script>
 </body>
 </html>
