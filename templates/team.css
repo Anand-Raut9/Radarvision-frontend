@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+
+.team-header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.team-header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.team-header p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+.team-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+.team-leader {
+    margin-bottom: 40px;
+    text-align: center;
+    justify-content: center;
+    .inchara-logo { background: url('logos/inchara.png') no-repeat; }
+}
+
+.team-leader h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    .inchara-logo { background: url('logos/inchara.png') no-repeat; }
+}
+
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.member-card {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.member-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 10px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+
+
+.member-info h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #007bff;
+}
+
+.member-info p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #666;
+}

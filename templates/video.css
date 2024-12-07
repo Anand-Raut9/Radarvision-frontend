@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; 
+    color: #003366;
+    text-align: center;
+  }
+  
+  .header {
+    background-color: #003366; 
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .video-container {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  video {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .controls {
+    margin-top: 10px;
+  }
+  
+  .control-btn {
+    background-color: #003366; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .control-btn:hover {
+    background-color: #00509e; 
+  }
+  
+  
+  .footer {
+    background-color: #003366; 
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+  
